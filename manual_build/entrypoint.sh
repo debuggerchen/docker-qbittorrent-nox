@@ -5,9 +5,6 @@ profilePath="/config"
 qbtConfigFile="$profilePath/qBittorrent/config/qBittorrent.conf"
 
 isRoot="0"
-if [ "$(id -u)" = "0" ]; then
-    isRoot="1"
-fi
 
 if [ "$isRoot" = "1" ]; then
     if [ -n "$PUID" ] && [ "$PUID" != "$(id -u qbtUser)" ]; then
